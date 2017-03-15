@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>Contact Us</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    function submitForm() {
+      var messageForm = document.getElementById("messageform");
+      alert("Your message has been sent:\n\n\""+ messageForm[4].value + "\"");
+    }
+  </script>
+</head>
+
+<body>
+    
+  <div class="content">
+
+    <div class="navigation-menu">
+      <a href="index.html">Homepage</a><br>
+      <a href="gallery.html">Gallery</a><br>
+      <a href="contactpage.html">Contact us</a><br>
+    </div>
+
+    <div class="header-bar"><h1>Asdf Inc.</h1></div>
+
+    <div class="main-body">
+      <form action="#" onsubmit="return submitForm()" method="post" id="messageform">
+        <p id="require-text">(fields with * are required)</p>
+        First and last name*:<br>
+        <input type="text" name="fullname" required><br><br>
+        Email*:<br>
+        <input type="text" name="email" required><br><br>
+        Phone:<br>
+        <input type="text" name="phone"><br><br>
+        Subject*:<br>
+        <input type="text" name="subject" required><br><br>
+        Your message*:<br>
+        <textarea name="message" cols="40" rows="10" required id="message"></textarea><br><br>
+        <input type="submit" value="Send">
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bar">&copy; Asdf Inc.</div>
+
+</body>
+</html>

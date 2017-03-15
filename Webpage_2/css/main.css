@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #0df;
+    background: linear-gradient(to right, #0dd, #0aa, #066, #156, #366, #466, #666);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h2 {
+    color: #0f0;
+}
+
+thead th {
+    background-color: #313;
+    color: #f0f;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.table-borderless th, .table-borderless td {
+    border: 0 !important;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #ded;
+ }
+
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: #cdc;
+ }
+/*
+tbody {
+    background-color: #111;
+    border-radius: 10px;
+    color: #5d5;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+}*/
+
+.table-curved {
+    border-collapse: separate;
+}
+.table-curved {
+    border: solid #ccc 1px;
+    border-radius: 6px;
+    border-left:0px;
+}
+.table-curved td, .table-curved th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.table-curved th {
+    border-top: none;
+}
+.table-curved th:first-child {
+    border-radius: 6px 0 0 0;
+}
+.table-curved th:last-child {
+    border-radius: 0 6px 0 0;
+}
+.table-curved th:only-child{
+    border-radius: 6px 6px 0 0;
+}
+.table-curved tr:last-child td:first-child {
+    border-radius: 0 0 0 6px;
+}
+.table-curved tr:last-child td:last-child {
+    border-radius: 0 0 6px 0;
+}

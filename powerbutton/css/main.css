@@ -1,0 +1,30 @@
+body {
+    background: #033;
+}
+
+.bright {
+    background: #f39c12;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.powerbtn {
+    background: #fff;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff;
+    border-radius: 50%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.button-active {
+    color: #0ff;
+}
