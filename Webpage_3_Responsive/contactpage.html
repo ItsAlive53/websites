@@ -2,49 +2,69 @@
 
 <html lang="en">
 <head>
-  <title>Contact Us</title>
+  <title>Home Page</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="scripts/contactform.js"></script>
   <link rel="stylesheet" href="css/main.css">
-  <script>
-    function submitForm() {
-      var messageForm = document.getElementById("messageform");
-      alert("Your message has been sent:\n\n\""+ messageForm[4].value + "\"");
-    }
-  </script>
 </head>
 
 <body>
-    
-  <div class="content">
-
-    <div class="navigation-menu">
-      <a href="index.html">Homepage</a><br>
-      <a href="gallery.html">Gallery</a><br>
-      <a href="contactpage.html">Contact us</a><br>
+<nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h1 class="navbar-brand">Asdf&nbsp;Inc.</h1>
+    <div class="collapse navbar-collapse" id="navbarNav" aria-expanded="false">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contactpage.html">Contact us</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="header-bar"><h1>Asdf Inc.</h1></div>
+  <div class="container margins">
+    <form id="messageform">
+      <div class="form-group">
+        <small id="requiredText" class="form-text text-muted">(fields with * are required)</small>
+        <label for="firstName">First Name*</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" required>
+      </div>
 
-    <div class="main-body">
-      <form action="#" onsubmit="return submitForm()" method="post" id="messageform">
-        <p id="require-text">(fields with * are required)</p>
-        First and last name*:<br>
-        <input type="text" name="fullname" required><br><br>
-        Email*:<br>
-        <input type="text" name="email" required><br><br>
-        Phone:<br>
-        <input type="text" name="phone"><br><br>
-        Subject*:<br>
-        <input type="text" name="subject" required><br><br>
-        Your message*:<br>
-        <textarea name="message" cols="40" rows="10" required id="message"></textarea><br><br>
-        <input type="submit" value="Send">
-      </form>
-    </div>
+      <div class="form-group">
+        <label for="lastName">Last Name*</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" required>
+      </div>
 
+      <div class="form-group">
+        <label for="email">Email Address*</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message*</label>
+        <textarea class="form-control" id="message" name="message" rows="10" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
   </div>
 
-  <div class="footer-bar">&copy; Asdf Inc.</div>
+  <footer class="footer text-center">&copy;&nbsp;Asdf&nbsp;Inc.</footer>
 
 </body>
 </html>
